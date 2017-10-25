@@ -1119,6 +1119,7 @@ class CliTests(unittest.TestCase):
         conns = [[x.strip("'") for x in re.findall("'\w+'", line)[:2]]
                  for ii, line in enumerate(stdout.split('\n'))
                  if ii % 2 == 1]
+        print("THis is the STD OUT  : " + stdout)
         conns = [conn for conn in conns if len(conn) > 0]
 
         # Assert that some of the connections are present in the output as
