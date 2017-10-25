@@ -119,13 +119,8 @@ def initdb():
             schema='default'))
     merge_conn(
         models.Connection(
-            conn_id='bigquery_default', conn_type='google_cloud_platform',
-            host = "",
-            login = "",
-            password = "",
-            schema = "",
-            port = "",
-            extra="{'extra': 'yes'}"))
+            conn_id='bigquery_default', conn_type='google_cloud_platform'
+        ).set_extra("{'extra': 'yes'}"))
     merge_conn(
         models.Connection(
             conn_id='local_mysql', conn_type='mysql',
